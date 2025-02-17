@@ -1,0 +1,132 @@
+/* Mustard yellow color */
+:root {
+    --mustard-yellow: #ffc107; /* Correct mustard yellow */
+    --light-dark: #121212; /* Dark background for project items */
+    --dark-bg: #1c1c1c; /* Slightly lighter black background */
+    --text-light: #e0e0e0; /* Light gray text for descriptions */
+    --button-bg: #333; /* Dark background for buttons */
+    --button-hover-bg: #555; /* Darker hover effect for buttons */
+}
+
+body {
+    background-color: #000000; /* Dark black background for the entire page */
+    color: white;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Projects section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 40px;
+    gap: 20px;
+}
+
+/* Individual project card */
+.project-card {
+    background-color: var(--dark-bg); /* Dark background for each project */
+    border: 1px solid var(--mustard-yellow); /* Mustard yellow border for elegance */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* For positioning content */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Hover effect for project card */
+.project-card:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+/* Project image */
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Project title */
+.project-card h3 {
+    color: var(--mustard-yellow); /* Yellow title to highlight the name */
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Project description */
+.project-card p {
+    color: var(--text-light); /* Light gray text for descriptions */
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-align: justify; /* Clean alignment for text */
+}
+
+/* Link to project */
+.project-card .project-link {
+    color: var(--mustard-yellow);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease;
+    margin-top: 10px;
+}
+
+.project-card .project-link:hover {
+    color: #ffeb3b; /* Slightly lighter yellow on hover */
+    text-decoration: underline;
+}
+
+/* Tools/Technologies Buttons */
+.project-card .tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-card .tools button {
+    background-color: var(--button-bg);
+    color: white;
+    border: 1px solid var(--mustard-yellow);
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .tools button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* GitHub and Medium Link Buttons */
+.project-card .social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.project-card .social-links a {
+    background-color: var(--button-bg);
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .social-links a:hover {
+    background-color: var(--button-hover-bg);
+}
