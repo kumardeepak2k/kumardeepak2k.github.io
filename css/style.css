@@ -393,8 +393,24 @@ mark,
     content: "\2014\00A0"; }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto; }
+  position: relative;
+  width: 200%;  /* Make image twice the size of its container */
+  height: auto;  /* Maintain aspect ratio */
+  left: 80px;  /* Move right */
+  top: 100px;  /* Move down */
+  max-width: none; /* Prevents unwanted scaling */
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {  
+  .img-fluid {
+      width: 100%; /* Scale down to fit mobile screens */
+      max-width: 100%; /* Prevents overflow */
+      left: 10px;  /* Reduce shift on mobile */
+      top: 20px;  /* Reduce downward movement */
+  }
+}
+
 
 .img-thumbnail {
   padding: 0.25rem;
