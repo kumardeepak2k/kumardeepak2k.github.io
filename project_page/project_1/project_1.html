@@ -1,128 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Showcase</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power BI Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to existing CSS -->
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 1100px; margin: auto; padding: 20px; background: #000; color: #ddd; }
-        h1, h2, h3 { color: #FFD700; }
-        p { font-size: 16px; margin-bottom: 15px; color: #bbb; }
-        .container { background: #111; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.1); transition: all 0.3s ease-in-out; }
-        .container:hover { transform: scale(1.02); }
-        .image-container, .video-container { text-align: center; margin: 20px 0; }
-        .image-container img { width: 100%; max-width: 700px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.1); }
-        .btn { display: block; text-align: center; padding: 10px; background: #FFD700; color: #000; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; transition: background 0.3s ease-in-out; }
-        .btn:hover { background: #e6c300; }
-        .github-btn { text-align: center; margin-top: 20px; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1, h2 {
+            color: #f4c10f;
+            font-weight: 600;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+        .summary {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .btn-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 12px 24px;
+            background-color: #f4c10f;
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+            border: 2px solid #f4c10f;
+        }
+        .btn:hover {
+            background-color: transparent;
+            color: #f4c10f;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+        nav a {
+            margin-right: 15px;
+            color: #f4c10f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📊 Data Project: [Project Name]</h1>
-        <p><em>Date: [Project Date]</em></p>
-        
-        <h2>🔍 Project Overview</h2>
-        <p>
-            This project explores [topic] using advanced data techniques. The goal was to uncover insights into [specific problem] and provide actionable solutions.
-        </p>
-        
-        <h2>🛠 Tools & Technologies Used</h2>
-        <p>
-            This project utilizes the following technologies:
-        </p>
-        <ul>
-            <li>Python, Pandas, NumPy</li>
-            <li>SQL, PostgreSQL</li>
-            <li>Power BI / Tableau</li>
-            <li>Web Scraping / API Integration</li>
-        </ul>
-        
-        <h2>📌 Data Collection & Cleaning</h2>
-        <p>
-            Data was sourced from [mention source]. Key preprocessing steps included:
-        </p>
-        <ul>
-            <li>Handling missing values and duplicates</li>
-            <li>Feature engineering for better insights</li>
-            <li>Data transformation and normalization</li>
-        </ul>
-        
-        <h2>📊 Exploratory Data Analysis (EDA)</h2>
-        <p>
-            Initial analysis provided the following insights:
-        </p>
-        <ul>
-            <li>Distribution patterns and outliers</li>
-            <li>Correlations between features</li>
-            <li>Trends and seasonality</li>
-        </ul>
-        
-        <h2>📈 Key Insights & Visualizations</h2>
-        <p>The following visuals summarize the key findings.</p>
-        
-        <div class="image-container">
-            <img src="project_page\project_1\proj_4.jpg" alt="Graph 1 - Data Trends">
-            <p><em>Figure 1: Key Trends in Data</em></p>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>My Power BI Dashboard</h1>
+
+        <!-- Dashboard Embed -->
+        <iframe title="Power BI Dashboard" 
+            src="https://app.powerbi.com/reportEmbed?reportId=8983f721-539e-43b0-86eb-6e161b07de4b&autoAuth=true&ctid=23b0daf1-173a-4a20-afa0-36d69a739904" 
+            allowFullScreen="true">
+        </iframe>
+
+        <!-- Project Summary -->
+        <div class="summary">
+            <h2>Project Summary</h2>
+            <p>
+                This Power BI dashboard provides insights into [Project Topic]. 
+                It includes metrics like [Key Metrics] and highlights trends and 
+                actionable insights to improve [Business Outcome].
+            </p>
         </div>
-        
-        <div class="image-container">
-            <img src="dashboard.jpg" alt="Dashboard Overview">
-            <p><em>Figure 2: Dashboard Overview</em></p>
+
+        <!-- Buttons for Additional Links -->
+        <div class="btn-container">
+            <a href="YOUR_YOUTUBE_LINK" target="_blank" class="btn">Watch Presentation</a>
+            <a href="YOUR_GITHUB_LINK" target="_blank" class="btn">View Source Code</a>
+            <a href="YOUR_MEDIUM_LINK" target="_blank" class="btn">Read Article</a>
         </div>
-        
-        <h2>🤖 Modeling & Algorithms (if applicable)</h2>
-        <p>
-            The following models were used to analyze the data:
-        </p>
-        <ul>
-            <li>Linear Regression / Decision Trees</li>
-            <li>Time Series Forecasting</li>
-            <li>Clustering / Classification</li>
-        </ul>
-        
-        <h2>🚀 Conclusion & Business Impact</h2>
-        <p>
-            The analysis revealed key patterns, leading to the following takeaways:
-        </p>
-        <ul>
-            <li>[Key Insight 1]</li>
-            <li>[Key Insight 2]</li>
-            <li>[Actionable Recommendations]</li>
-        </ul>
-        
-        <h2>💡 Challenges & Learnings</h2>
-        <p>
-            During this project, the main challenges faced were:
-        </p>
-        <ul>
-            <li>Handling large datasets efficiently</li>
-            <li>Ensuring data accuracy and consistency</li>
-            <li>Interpreting complex results</li>
-        </ul>
-        
-        <h2>📈 Future Improvements</h2>
-        <p>
-            Potential enhancements for this project include:
-        </p>
-        <ul>
-            <li>Integrating real-time data updates</li>
-            <li>Enhancing model accuracy with additional features</li>
-            <li>Building a full interactive dashboard</li>
-        </ul>
-        
-        <h2>🎥 Watch the Full Walkthrough</h2>
-        <div class="video-container">
-            <iframe width="700" height="400" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                title="Project Presentation" frameborder="0" allowfullscreen>
-            </iframe>
-        </div>
-        
-        <div class="github-btn">
-            <a href="https://github.com/kumardeepak2k" class="btn">View Source Code on GitHub</a>
-        </div>
-        
-        <a href="https://kumardeepak2k.github.io/" class="btn">Back to Portfolio</a>
-    </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Deepak Kumar. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
